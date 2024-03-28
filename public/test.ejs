@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <form id="add-car-form" method="POST" action="http://localhost:8000/api/cars/">
+        <label for="model">Model:</label>
+        <input type="text" id="model" name="model">
+        <input type="text" id="rentPerDay" name="rentPerDay">
+        <input type="text" id="carSize" name="carSize">
+        <input type="text" id="image" name="image">
+        <button type="submit">Create Car</button>
+    </form>
+      <a href="http://localhost:8000/api/cars/2" data-method="delete">delete some post</a>
+      <button type="submit" id="deleteBtn" value="66045901c9d73cc8a88f2a5c" class="btn btn-success my-3">Cari Mobil</button>
+      
+    <div class="input">
+        <input type="text" id="modelUpdate" name="model">
+        <input type="text" id="rentPerDayUpdate" name="rentPerDay">
+        <input type="text" id="carSizeUpdate" name="carSize">
+        <input type="text" id="imageUpdate" name="image">
+        <button type="submit" id="updateBtn" value="660458d53983ec094e9757f0">Create Car</button>
+    </div>
+
+    <% if (data) { %>  
+      <div class="col">
+        <div class="card">
+          <img src="/<%= data.image%>" style="-o-object-fit: cover;object-fit: cover;" width=270px height=160px   class="card-img-top mt-4">
+          <div class="card-body">
+            <h5 class="card-title"><%= data.model%></h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <div class="d-grid gap-2 d-md-block">
+              <a href="http://localhost:8000/dashboard/update/<%= data.id%>" data-method="delete">delete some post</a>
+              <button type="submit" id="deleteBtn" value="<%= data.id%>" class="btn btn-outline-danger my-3">Delete</button>
+              <a href="http://localhost:8000/dashboard/update/<%= data.id%>" class="btn btn-success">Update</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <% } else { %>
+        <p>No data available.</p>
+      <% } %>   
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+      
+    <script type="text/javascript" src="./scripts/binar.js"></script>
+  <script type="text/javascript" src="./scripts/test.js"></script>
+  <script type="text/javascript" src="./scripts/car.example.js"></script>
+  <script type="text/javascript" src="./scripts/main.example.js"></script>
+</body>
+</html>
