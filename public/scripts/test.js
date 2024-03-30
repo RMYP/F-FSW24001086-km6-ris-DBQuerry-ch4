@@ -1,58 +1,48 @@
-class App {
-    constructor() {
-        this.deleteBtn = document.getElementById('deleteBtn');
+// Delete Data const
+const deleteBtns = document.querySelectorAll('.btn-outline-danger');
+// Update Data const
+const modelUpdate = document.getElementById('modelUpdate');
+const rentPerDayUpdate = document.getElementById('rentPerDayUpdate');
+const carSizeUpdate = document.getElementById('carSizeUpdate');
+const imageUpdate = document.getElementById('imageUpdate');
+const updateBtn = document.getElementById('updateBtn')
+// Make new New Data
 
-        this.modelUpdate = document.getElementById('modelUpdate');
-        this.rentPerDayUpdate = document.getElementById('rentPerDayUpdate');
-        this.carSizeUpdate = document.getElementById('carSizeUpdate');
-        this.imageUpdate = document.getElementById('imageUpdate');
-        this.updateBtn = document.getElementById('updateBtn')
-        this.btnGetCarData = document.getElementById('get-car-data-byId');
-    }
+// -----------Delete Data
+deleteBtns.forEach(deleteBtn => {
+    deleteBtn.addEventListener('click', () =>{
+        this.deleteCarData(deleteBtn.value)
+    });
+});
 
-    async init() {
-        // await this.load();
-        this.deleteBtn.onclick = this.deleteCarData;
-        this.updateBtn.onclick = this.updateCarData;
-        // this.btnGetCarData.onclick = this.updateCarData;
-    }
+function deleteCarData (data) {
+    console.log(data);
+    const endPoint = `http://localhost:8000/api/cars/${data}`;
+    fetch(endPoint, {
+    method: "DELETE"
+    });
+}
 
-    deleteCarData = () => {
-        console.log(this.deleteBtn.value)
-        fetch(`http://localhost:8000/api/cars/${this.deleteBtn.value}`, {
-            method: 'DELETE'
-        })
-    }
-
-    getCarDataById = () => {
-        try {
-            fetch(`http://localhost:8000/api/cars/${this.btnGetCarData.value}`, {
-            method: 'GET'
-        })
-        } catch (error) {
-            
-        }
-    }
-
-    updateCarData = async () => {
-        console.log(this.updateBtn.value)
+// ------------End Delete Data
+// =========================================================
+// ------------Update Car Data
+if(updateBtn != null){
+    updateBtn.addEventListener('click', async ()=> {
+        console.log(updateBtn.value)
         const data = {
-            model: this.modelUpdate.value,
-            rentPerDay: this.rentPerDayUpdate.value,
-            carSize: this.carSizeUpdate.value,
-            image: this.imageUpdate.value,
+            model: modelUpdate.value,
+            rentPerDay: rentPerDayUpdate.value,
+            carSize: carSizeUpdate.value,
+            image: imageUpdate.value,
         }
         const jsonString = JSON.stringify(data)
-        try {
-            await fetch(`http://localhost:8000/api/cars/${this.updateBtn.value}`, {
+            fetch(`http://localhost:8000/api/cars/${updateBtn.value}`, {
             method: 'PUT',
             headers: {
                 'Content-type': 'application/json; charset=UTF-8'
-               },              
-            body: jsonString
-        });
-        } catch (err) {
-            console.log(err)   
-        }
-    }
+            },              
+            body: jsonString    
+        })
+        .then(window.location.replace("http://localhost:8000/dashboard"))
+    })
 }

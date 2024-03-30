@@ -44,7 +44,6 @@ const getAllCarsData = (req, res) => {
 const getCarDataById = async (req, res) => {
    try {
     const data = await cars.findById(req.params.id)
-    console.log(data)
     res.render("updatePage.ejs", {data})
    } catch (err) {
     console.log(err)
@@ -58,12 +57,7 @@ const updateCarData = async (req, res) => {
         new:true
       })
       console.log("test ping")
-      res.status(200).json({
-        status: "success",
-        data: {
-          carData
-        }
-      })
+      res.redirect('/dashboard')
     } catch (err) {
       console.log("test ping")
       res.status(400).json({
