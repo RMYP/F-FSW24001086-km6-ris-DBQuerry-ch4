@@ -102,9 +102,10 @@
             <h4 style="margin-top: -50px;">List Car</h4>
             <div class="filter-s-m-l">
               <div class="mt-2" role="group" aria-label="Basic example">
-                <button type="button" class="btn btn-primary">Small</button>
-                <button type="button" class="btn btn-primary">Medium</button>
-                <button type="button" class="btn btn-primary">Large</button>
+                <a href="http://localhost:8000/dashboard/" type="button" class="btn btn-outline-info">All</a>
+                <a href="http://localhost:8000/dashboard/search/Small" type="button" class="btn btn-outline-info">Small</a>
+                <a href="http://localhost:8000/dashboard/search/Medium" type="button" class="btn btn-outline-info">Medium</a>
+                <a href="http://localhost:8000/dashboard/search/Large" type="button" class="btn btn-outline-info">Large</a>
               </div>
             </div>
           </div>
@@ -117,11 +118,11 @@
                       <div class="card-body">
                         <h5 class="card-title"><%= data.model%></h5>
                         <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <div class="d-grid gap-2 d-md-block">
+                        <div class="d-grid gap-2 d-md-block" role="group">
                           <form action="http://localhost:8000/dashboard/delete/<%= data.id%>" method="post">
-                            <button type="submit" id="deleteBtn"class="btn btn-outline-danger my-3">DeleteT</button>
+                            <button type="submit" id="deleteBtn"class="btn btn-outline-danger my-3">Delete</button>
+                            <a href="http://localhost:8000/dashboard/update/<%= data.id%>" class="btn btn-success">Update</a>
                           </form>
-                          <a href="http://localhost:8000/dashboard/update/<%= data.id%>" class="btn btn-success">Update</a>
                         </div>
                       </div>
                     </div>

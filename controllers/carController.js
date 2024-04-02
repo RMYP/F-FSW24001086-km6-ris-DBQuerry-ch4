@@ -61,12 +61,15 @@ const updateCarPage = async (req, res) => {
 
 const updateCarData = async (req, res) => {
     try {
-        const id = req.params.id
-        await Cars.findByIdAndUpdate(id, {
-            ...req.body, 
-            image: req.file.filename, 
-          }, { new: true });
-      
+        const id = req.params.id;
+        const updateData = { ...req.body }; 
+        if (req.file) {
+        updateData.image = req.file.filename;
+        } else {
+        updateData.image = data.image; 
+        }
+
+        await Cars.findByIdAndUpdate(id, updateData, { new: true });
         res.redirect("/dashboard");
     } catch (err) {
         console.log(err);
@@ -83,6 +86,16 @@ const deleteCarData = async (req, res) => {
     }
 }
 
+const filterCarSize = async (req, res) => {
+    try {
+        const carSize = req.params.carSize
+        const data = await Cars.find({carSize: carSize})
+        res.render("dashboard.ejs", { data });
+    } catch (err) {
+        console.log(err)
+    }
+}
+
 module.exports = {
     getAllCarData,
     updateCarPage,
@@ -90,5 +103,6 @@ module.exports = {
     deleteCarData,
     createNewCarData,
     createCarDataPage,
-    searchCarData
+    searchCarData,
+    filterCarSize
 }
