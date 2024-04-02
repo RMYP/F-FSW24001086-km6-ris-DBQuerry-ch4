@@ -40,12 +40,6 @@ const carsSchema = new mongoose.Schema({
     year: {
         type: Number
     },
-    options: {
-        type: [String]
-    },
-    specs: {
-        type: [String]
-    },
     createdAt: {
         type: Date
     },

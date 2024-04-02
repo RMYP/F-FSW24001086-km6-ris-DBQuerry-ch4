@@ -1,6 +1,8 @@
 const express = require("express");
 const path = require("path");
 const PUBLIC_DIRECTORY = path.join(__dirname + "/views");
+const flash = require("express-flash")
+const session = require("express-session")
 
 const routerCars = require("./routes");
 // const exp = require("constants");
@@ -17,6 +19,14 @@ const storage = multer.diskStorage({
         cb(null, filename)
     }
 })
+
+app.use(session({
+    secret: 'rahasia',
+    resave: false,
+    saveUninitialized: true
+}));
+app.use(flash());
+
 
 app.use(express.static(PUBLIC_DIRECTORY));
 app.use(express.json());

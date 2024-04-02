@@ -34,7 +34,7 @@ const getAllCarData = async (req, res) => {
             }
             
         })
-        res.render("dashboard.ejs", {data})
+        res.render("dashboard.ejs", {data, data, messages: req.flash('info')})
     } catch (err) {
       console.log(err)
     }
@@ -52,6 +52,7 @@ const createCarDataPage = (req, res) => {
 const createNewCarData = async (req, res) => {
     try {
         await Cars.create({...req.body, image: req.file.filename})
+        req.flash('info', 'updateData');
         res.redirect("/dashboard")
     } catch (err) {
         console.log(err)
@@ -72,6 +73,7 @@ const updateCarData = async (req, res) => {
     try {
         const id = req.params.id;
         await Cars.findByIdAndUpdate(id, {...req.body, image: req.file.filename, updateAt: Date.now()}, { new: true });
+        req.flash('info', 'updateData');
         res.redirect("/dashboard");
     } catch (err) {
         console.log(err);
@@ -82,6 +84,7 @@ const deleteCarData = async (req, res) => {
     try {
         const id = req.params.id;
         await Cars.findByIdAndDelete(id)
+        req.flash('info', 'Delete');
         res.redirect("/dashboard")
     } catch (err) {
         console.log(err)
