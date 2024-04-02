@@ -45,6 +45,12 @@ const carsSchema = new mongoose.Schema({
     },
     specs: {
         type: [String]
+    },
+    createdAt: {
+        type: Date
+    },
+    updateAt: {
+        type: Date
     }
 });
 

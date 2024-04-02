@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+const moment = require("moment")
 app.use(express.json());
 // const cars = JSON.parse(fs.readFileSync(`${__dirname}/../data/cars.json`))
 const Cars = require("../models/carsModel")
@@ -25,6 +26,14 @@ const searchCarData = async (req, res) => {
 const getAllCarData = async (req, res) => {
     try {    
         const data = await Cars.find()
+        data.forEach(dataCar => {
+            if(dataCar.updateAt){
+                dataCar.formatCreatedAt = moment(dataCar.updateAt).format("D MMM YYYY, h:mm A");
+            }else if(dataCar.createdAt){
+                dataCar.formatCreatedAt = moment(dataCar.createdAt).format("D MMM YYYY, h:mm A");
+            }
+            
+        })
         res.render("dashboard.ejs", {data})
     } catch (err) {
       console.log(err)
@@ -62,14 +71,7 @@ const updateCarPage = async (req, res) => {
 const updateCarData = async (req, res) => {
     try {
         const id = req.params.id;
-        const updateData = { ...req.body }; 
-        if (req.file) {
-        updateData.image = req.file.filename;
-        } else {
-        updateData.image = data.image; 
-        }
-
-        await Cars.findByIdAndUpdate(id, updateData, { new: true });
+        await Cars.findByIdAndUpdate(id, {...req.body, image: req.file.filename, updateAt: Date.now()}, { new: true });
         res.redirect("/dashboard");
     } catch (err) {
         console.log(err);
