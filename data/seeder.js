@@ -1,8 +1,7 @@
 require("dotenv").config();
 const mongoose = require("mongoose");
 const fs = require("fs");
-const carsModels = require("../model/carsModels");
-const { json } = require("express");
+const carsModels = require("../models/carsModel");
 const db = process.env.database;
 
 mongoose.connect(db, {
