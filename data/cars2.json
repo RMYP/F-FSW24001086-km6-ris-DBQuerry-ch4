@@ -13,7 +13,8 @@
       "available": true,
       "type": "Sedan",
       "year": 2022,
-      "createdAt": "2022-03-23T15:49:05.563Z"
+      "createdAt": "2022-03-23T15:49:05.563Z",
+      "carSize": "Medium"
     },
     {
       "id": "9ff03bbc-b18c-4ba7-8f3a-4c4b5c2f6c77",
@@ -29,7 +30,8 @@
       "available": false,
       "type": "Convertible",
       "year": 2019,
-      "createdAt": "2022-03-23T15:49:05.563Z"
+      "createdAt": "2022-03-23T15:49:05.563Z",
+      "carSize": "Medium"
     },
     {
       "id": "bf6b5c43-1377-4ae0-8908-310c64266f81",
@@ -45,7 +47,8 @@
       "available": true,
       "type": "Sedan",
       "year": 2021,
-      "createdAt": "2022-03-23T15:49:05.563Z"
+      "createdAt": "2022-03-23T15:49:05.563Z",
+      "carSize": "Large"
     },
     {
       "id": "5b67f1d7-92d4-41c7-8577-4435740aadf1",
@@ -61,7 +64,8 @@
       "available": true,
       "type": "Hatchback",
       "year": 2018,
-      "createdAt": "2022-03-23T15:49:05.563Z"
+      "createdAt": "2022-03-23T15:49:05.563Z",
+      "carSize": "Large"
     },
     {
       "id": "23574b8f-3e89-4685-a348-67c1f7e5b3c4",
@@ -77,7 +81,8 @@
       "available": false,
       "type": "Minivan",
       "year": 2020,
-      "createdAt": "2022-03-23T15:49:05.563Z"
+      "createdAt": "2022-03-23T15:49:05.563Z",
+      "carSize": "Large"
     },
     {
       "id": "3eead6db-c536-406b-9bc5-85d4c6e38a76",
@@ -93,7 +98,8 @@
       "available": true,
       "type": "Hatchback",
       "year": 2016,
-      "createdAt": "2022-03-23T15:49:05.563Z"
+      "createdAt": "2022-03-23T15:49:05.563Z",
+      "carSize": "Small"
     },
     {
       "id": "752685ce-dd39-40e5-9af5-93fdd36dea7e",
@@ -109,7 +115,8 @@
       "available": false,
       "type": "Sedan",
       "year": 2020,
-      "createdAt": "2022-03-23T15:49:05.563Z"
+      "createdAt": "2022-03-23T15:49:05.563Z",
+      "carSize": "Small"
     },
     {
       "id": "d97e0af5-2728-4ce3-ba7f-9d83a0837db6",
@@ -125,7 +132,8 @@
       "available": true,
       "type": "Regular Cab Pickup",
       "year": 2014,
-      "createdAt": "2022-03-23T15:49:05.563Z"
+      "createdAt": "2022-03-23T15:49:05.563Z",
+      "carSize": "Small"
     },
     {
       "id": "0d5de078-a5fc-456b-9487-47eb450a01c6",
@@ -141,7 +149,8 @@
       "available": false,
       "type": "Extended Cab Pickup",
       "year": 2012,
-      "createdAt": "2022-03-23T15:49:05.563Z"
+      "createdAt": "2022-03-23T15:49:05.563Z",
+      "carSize": "Small"
     },
     {
       "id": "6dfa349e-631c-46c0-a037-5c73902ff738",
@@ -157,7 +166,8 @@
       "available": true,
       "type": "Hatchback",
       "year": 2019,
-      "createdAt": "2022-03-23T15:49:05.563Z"
+      "createdAt": "2022-03-23T15:49:05.563Z",
+      "carSize": "Small"
     },
     {
       "id": "803593fb-b857-4a01-adc4-651538217a04",
@@ -173,7 +183,8 @@
       "available": false,
       "type": "Coupe",
       "year": 2019,
-      "createdAt": "2022-03-23T15:49:05.563Z"
+      "createdAt": "2022-03-23T15:49:05.563Z",
+      "carSize": "Small"
     },
     {
       "id": "e0a96736-a2d5-40ca-87de-64b59cac85d8",
@@ -189,7 +200,8 @@
       "available": true,
       "type": "Passenger Van",
       "year": 2018,
-      "createdAt": "2022-03-23T15:49:05.563Z"
+      "createdAt": "2022-03-23T15:49:05.563Z",
+      "carSize": "Small"
     },
     {
       "id": "e39f2965-57da-4d8f-afdb-74f6c54e69f0",
@@ -205,7 +217,8 @@
       "available": true,
       "type": "SUV",
       "year": 2017,
-      "createdAt": "2022-03-23T15:49:05.563Z"
+      "createdAt": "2022-03-23T15:49:05.563Z",
+      "carSize": "Medium"
     },
     {
       "id": "c18a5545-2ce2-4330-aa3b-1bbcf6247519",
@@ -221,7 +234,8 @@
       "available": false,
       "type": "Regular Cab Pickup",
       "year": 2020,
-      "createdAt": "2022-03-23T15:49:05.563Z"
+      "createdAt": "2022-03-23T15:49:05.563Z",
+      "carSize": "Medium"
     },
     {
       "id": "72530cba-051d-49d8-822b-deaf2e5330ca",
@@ -237,7 +251,8 @@
       "available": true,
       "type": "Regular Cab Pickup",
       "year": 2017,
-      "createdAt": "2022-03-23T15:49:05.563Z"
+      "createdAt": "2022-03-23T15:49:05.563Z",
+      "carSize": "Medium"
     },
     {
       "id": "79cc327b-2b0f-4042-acdf-78386b2f8ebd",
@@ -253,7 +268,8 @@
       "available": true,
       "type": "Convertible",
       "year": 2021,
-      "createdAt": "2022-03-23T15:49:05.563Z"
+      "createdAt": "2022-03-23T15:49:05.563Z",
+      "carSize": "Medium"
     },
     {
       "id": "22c969a7-04ce-4efb-a479-7ab3bc094cb9",
@@ -269,7 +285,8 @@
       "available": false,
       "type": "Regular Cab Pickup",
       "year": 2015,
-      "createdAt": "2022-03-23T15:49:05.563Z"
+      "createdAt": "2022-03-23T15:49:05.563Z",
+      "carSize": "Medium"
     },
     {
       "id": "1bfda124-5175-4b90-bee7-d66affdbcc66",
@@ -285,7 +302,8 @@
       "available": false,
       "type": "Sedan",
       "year": 2014,
-      "createdAt": "2022-03-23T15:49:05.563Z"
+      "createdAt": "2022-03-23T15:49:05.563Z",
+      "carSize": "Medium"
     },
     {
       "id": "08cbd537-497f-4305-b7b4-e7493c703a2c",
@@ -301,7 +319,8 @@
       "available": false,
       "type": "Convertible",
       "year": 2021,
-      "createdAt": "2022-03-23T15:49:05.563Z"
+      "createdAt": "2022-03-23T15:49:05.563Z",
+      "carSize": "Medium"
     },
     {
       "id": "950575d6-958c-422e-a46b-c3ed2e1315ed",
@@ -317,7 +336,8 @@
       "available": false,
       "type": "Crew Cab Pickup",
       "year": 2012,
-      "createdAt": "2022-03-23T15:49:05.563Z"
+      "createdAt": "2022-03-23T15:49:05.563Z",
+      "carSize": "Small"
     },
     {
       "id": "b89117fc-69e1-4366-ba21-9d6a0b2bfb04",
@@ -333,7 +353,8 @@
       "available": false,
       "type": "SUV",
       "year": 2013,
-      "createdAt": "2022-03-23T15:49:05.563Z"
+      "createdAt": "2022-03-23T15:49:05.563Z",
+      "carSize": "Small"
     },
     {
       "id": "fc1d3297-ab17-40a9-a79c-ca7307ed5faa",
@@ -349,7 +370,8 @@
       "available": false,
       "type": "Coupe",
       "year": 2020,
-      "createdAt": "2022-03-23T15:49:05.563Z"
+      "createdAt": "2022-03-23T15:49:05.563Z",
+      "carSize": "Small"
     },
     {
       "id": "432d9ed1-e330-4953-ac33-f51a60a5799b",
@@ -365,7 +387,8 @@
       "available": false,
       "type": "Extended Cab Pickup",
       "year": 2022,
-      "createdAt": "2022-03-23T15:49:05.563Z"
+      "createdAt": "2022-03-23T15:49:05.563Z",
+      "carSize": "Small"
     },
     {
       "id": "32e7e56f-1a00-455f-bf4b-dbd2c8c4daaf",
@@ -381,7 +404,8 @@
       "available": false,
       "type": "Sedan",
       "year": 2022,
-      "createdAt": "2022-03-23T15:49:05.563Z"
+      "createdAt": "2022-03-23T15:49:05.563Z",
+      "carSize": "Small"
     },
     {
       "id": "e76e884b-8f3e-4b90-a717-9239676d0191",
@@ -397,7 +421,8 @@
       "available": false,
       "type": "Wagon",
       "year": 2015,
-      "createdAt": "2022-03-23T15:49:05.563Z"
+      "createdAt": "2022-03-23T15:49:05.563Z",
+      "carSize": "Small"
     }
   ]
   

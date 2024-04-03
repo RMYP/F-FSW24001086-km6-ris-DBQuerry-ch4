@@ -13,17 +13,17 @@
   GET /dashboard/search/:carSize
 ```
 #### Create
-```Create
+```http
   GET /dashboard/create 
   POST /dashboard/create
 ```
 #### Update
-```Create
+```http
   GET /dashboard/update/:id
   POST /dashboard/update/:id
 ```
 #### Delete
-```Create
+```http
   POST/dashboard/delete/:id
 ```
 #### 
