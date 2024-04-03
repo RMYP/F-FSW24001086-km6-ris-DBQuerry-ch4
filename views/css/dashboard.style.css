@@ -1,0 +1,31 @@
+nav{
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.nav-list{
+    background-color: white;
+}
+
+body{
+  margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;  
+}
+
+body .card-main{
+  overflow-y: scroll;
+  overflow: hidden;
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+#card-main::-webkit-scrollbar {
+  display: none;
+}
+
+#card-main{
+  overflow-y: scroll;
+  height: 90vh;
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
